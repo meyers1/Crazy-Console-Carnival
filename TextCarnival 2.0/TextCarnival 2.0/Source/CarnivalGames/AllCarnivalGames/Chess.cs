@@ -6,6 +6,47 @@ using System.Threading.Tasks;
 
 namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
 {
+    class Piece
+    {
+        public int X { get; private set; }
+        public int Y { get; private set; }
+        public int color { get; private set; }
+        public virtual bool IsValidMove(int X, int Y, int newX, int newY)
+        {
+            return false;
+        }
+    }
+
+    class Pawn : Piece
+    {
+
+    }
+
+    class Rook : Piece
+    {
+
+    }
+
+    class Knight : Piece
+    {
+
+    }
+
+    class Bishop : Piece
+    {
+
+    }
+
+    class King : Piece
+    {
+
+    }
+
+    class Queen : Piece
+    {
+
+    }
+
     class Chess : CarnivalGame
     {
         static string[,] board = new string[8, 8];
@@ -42,7 +83,6 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
                 {
                     write(board[i, j] + "!");
                 }
-
                 if (i == 7)
                 {
                     writeLine("\n       ---------------------------------");
