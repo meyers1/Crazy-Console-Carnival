@@ -19,7 +19,10 @@ namespace TextCarnivalV2.Source.CarnivalGames.AllCarnivalGames
 
     class Pawn : Piece
     {
-
+        public override bool IsValidMove(int X, int Y, int newX, int newY)
+        {
+            if ()
+        }
     }
 
     class Rook : Piece
